@@ -1,0 +1,9 @@
+<input [(ngModel)]="tareas" type="text">
+<button type="submit" (click)="botonTareas()">Añadir a la lista</button>
+<button type="submit" (click)="botonUrgente()">Añadir tarea urgente a la lista</button>
+<ul>
+<li *ngFor="let tarea of arrayTareas">{{tarea}} <button type="submit" (click)="botonMover(tarea)">Mover al final de la lista</button></li>
+</ul>
+<h2>Siguiente tarea</h2>
+<div>{{arrayTareas[0]}}</div><br>
+<button type="submit" (click)="botonBorrado()">Terminar</button>

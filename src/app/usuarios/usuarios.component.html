@@ -1,0 +1,6 @@
+<h2>Crear usuario</h2>
+<input [(ngModel)]="usuario" type="text">
+<button type="submit" (click)="crearUsuario()">Añadir usuario</button>
+<ul>
+<li *ngFor="let usuario of arrayUsuario">{{usuario}}</li>
+</ul>
