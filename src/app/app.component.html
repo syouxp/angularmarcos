@@ -3,3 +3,10 @@
 <p>{{escribe}}</p>
 <button type="submit" (click)="boton()">Púlsame</button>
 <p>{{parrafo}}</p>
+<button type="submit" (click)="pulsado=!pulsado">Alternador</button>
+<p *ngIf="pulsado">{{mensaje}}</p><br><br>
+<input [(ngModel)]="tareas" type="text">
+<button type="submit" (click)="botonTareas()">Añadir a la lista</button>
+<ul>
+<li *ngFor="let tarea of arrayTareas">{{tarea}}</li>
+</ul>
